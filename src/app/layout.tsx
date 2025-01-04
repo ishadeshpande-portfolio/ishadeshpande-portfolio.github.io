@@ -1,69 +1,81 @@
 'use client';
 
 import Link from "next/link";
-import { Inter } from "next/font/google";
+import { Inter } from 'next/font/google';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black text-white px-4 h-16 flex items-center justify-center">
+      <div className="container mx-auto flex justify-center items-center max-w-screen-xl relative">
+        <button 
+          className="md:hidden absolute left-4"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        <nav className={`${isMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row absolute md:relative top-16 md:top-0 left-0 right-0 bg-black md:bg-transparent p-4 md:p-0 space-y-2 md:space-y-0 md:space-x-4 items-center`}>
+          <NavLink href="/" onClick={() => setIsMenuOpen(false)}>HOME</NavLink>
+          <NavLink href="/#about" onClick={() => setIsMenuOpen(false)}>ABOUT</NavLink>
+          <NavLink href="/#experience" onClick={() => setIsMenuOpen(false)}>EXPERIENCE</NavLink>
+          <NavLink href="/#education" onClick={() => setIsMenuOpen(false)}>EDUCATION</NavLink>
+          <NavLink href="/projects" onClick={() => setIsMenuOpen(false)}>PROJECTS</NavLink>
+          <NavLink href="/designs" onClick={() => setIsMenuOpen(false)}>DESIGNS</NavLink>
+          <NavLink href="/blogs" onClick={() => setIsMenuOpen(false)}>BLOGS</NavLink>
+          <NavLink href="/#contact" onClick={() => setIsMenuOpen(false)}>CONTACT</NavLink>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function Footer() {
+  const basePath = "/portfolio-pages";
+  
+  return (
+    <footer className="flex flex-col sm:flex-row py-4 w-full shrink-0 items-center justify-between px-4 md:px-6 border-t text-center sm:text-left">
+      <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 sm:mb-0">
+        © 2023 Isha Deshpande. All rights reserved.
+      </p>
+      <nav className="flex gap-4 sm:gap-6 justify-center sm:justify-end">
+        <Link className="text-xs hover:underline underline-offset-4" href={`${basePath}/terms`}>
+          Terms of Service
+        </Link>
+        <Link className="text-xs hover:underline underline-offset-4" href={`${basePath}/privacy`}>
+          Privacy
+        </Link>
+      </nav>
+    </footer>
+  );
+}
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const basePath = "/portfolio-pages"; // Your GitHub repository name
-
   return (
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
-          {/* Header Section */}
-          <header className="fixed top-0 left-0 right-0 z-50 bg-black text-white px-4 md:px-8 h-16 flex items-center justify-center">
-            <div className="container mx-auto flex justify-between items-center max-w-screen-xl">
-              {/* Logo or Brand */}
-              <Link className="flex items-center justify-center mr-6" href={`${basePath}/`}>
-                <span className="sr-only">Isha Deshpande</span>
-              </Link>
-
-              {/* Navbar */}
-              <nav className="flex-1 flex justify-evenly items-center space-x-4 md:space-x-6 overflow-x-auto">
-                <NavLink href="/">HOME</NavLink>
-                <NavLink href="/#about">ABOUT</NavLink>
-                <NavLink href="/#experience">EXPERIENCE</NavLink>
-                <NavLink href="/#education">EDUCATION</NavLink>
-                <NavLink href="/projects">PROJECTS</NavLink>
-                <NavLink href="/designs">DESIGNS</NavLink>
-                <NavLink href="/blogs">BLOGS</NavLink>
-                <NavLink href="/#contact">CONTACT</NavLink>
-              </nav>
-            </div>
-          </header>
-
-
-          {/* Main Content */}
-          <main className="flex-1 pt-14">{children}</main>
-
-          {/* Footer Section */}
-          <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center justify-between px-4 md:px-6 border-t">
-            <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 sm:mb-0">
-              © 2023 Isha Deshpande. All rights reserved.
-            </p>
-            <nav className="flex gap-4 sm:gap-6">
-              <Link className="text-xs hover:underline underline-offset-4" href={`${basePath}/terms`}>
-                Terms of Service
-              </Link>
-              <Link className="text-xs hover:underline underline-offset-4" href={`${basePath}/privacy`}>
-                Privacy
-              </Link>
-            </nav>
-          </footer>
+          <Header />
+          <main className="flex-1 pt-16">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>
   );
 }
 
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+function NavLink({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void }) {
   const basePath = "/portfolio-pages"; // Your GitHub repository name
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -75,12 +87,13 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
         targetElement.scrollIntoView({ behavior: "smooth" });
       }
     }
+    if (onClick) onClick();
   };
 
   return (
     <a
-      href={`${basePath}${href}`}
       // href={`${href}`}
+      href={`${basePath}${href}`}
       onClick={handleClick}
       className="text-sm font-medium px-2 py-2 relative group whitespace-nowrap"
     >
@@ -89,3 +102,4 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
     </a>
   );
 }
+
