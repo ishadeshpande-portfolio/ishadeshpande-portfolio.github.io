@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
 import { Instagram, Linkedin, Mail, DribbbleIcon as Behance, Twitter } from 'lucide-react'
 import CareerJourney from '@/components/CareerJourney'
 
