@@ -19,14 +19,15 @@ export default function Home() {
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-50">
           <h1 className="text-7xl font-bold text-white mb-6">Isha Deshpande</h1>
           <div className="text-2xl text-white">
-          <AnimatedText 
+          {/* <AnimatedText 
               texts={[
                 "Cyber Security Engineer and Product Manager"
               ]}
               typingSpeed={100}
               deletingSpeed={50}
               delayBetweenTexts={100}
-            />
+            /> */}
+            <h2>Cyber Security Engineer and Product Manager</h2>
           </div>
         </div>
       </div>
