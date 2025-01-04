@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Linkedin, Mail, DribbbleIcon as Behance, Twitter, Check, Github } from 'lucide-react'
+import { AnimatedText } from '../components/ui/AnimatedText'
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative h-screen w-full">
         <Image
-          src="/.uiuc.jpg"
+          src="/uiuc.jpg"
           alt="UIUC View"
           layout="fill"
           objectFit="cover"
@@ -18,7 +19,14 @@ export default function Home() {
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-50">
           <h1 className="text-7xl font-bold text-white mb-6">Isha Deshpande</h1>
           <div className="text-2xl text-white">
-          <div className="typewriter">Cyber Security Engineer and Product Manager</div>
+          <AnimatedText 
+              texts={[
+                "Cyber Security Engineer and Product Manager"
+              ]}
+              typingSpeed={100}
+              deletingSpeed={50}
+              delayBetweenTexts={100}
+            />
           </div>
         </div>
       </div>
@@ -33,7 +41,7 @@ export default function Home() {
                 <div className="flex flex-col items-center">
                   <div className="flex-shrink-0 mb-8">
                     <Image
-                      src="./profile.jpg"
+                      src="/profile.jpg"
                       alt="Isha Deshpande Image"
                       width={250}
                       height={250}
@@ -78,13 +86,13 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-12">EDUCATION</h2>
           <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
             <EducationCard 
-              logoSrc="./uiuc_logo.jpg?height=250&width=250"
+              logoSrc="/uiuc_logo.jpg?height=250&width=250"
               universityName="University of Illinois Urbana-Champaign"
               degree="Master of Science in Technology Management"
               year="2024 - 2025"
             />
             <EducationCard 
-              logoSrc="./ccoew_logo.jpeg?height=250&width=250"
+              logoSrc="/ccoew_logo.jpeg?height=250&width=250"
               universityName="Cummins college of Engineering"
               degree="Bachelor of Engineering in Information Technology"
               year="2019 - 2023"
@@ -99,25 +107,25 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-12">EXPERIENCE</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ExperienceCard 
-              logoSrc="./pwc_logo.png?height=400&width=400"
+              logoSrc="/pwc_logo.png?height=400&width=400"
               companyName="Price Waterhouse Coopers (PwC)"
               position="Associate"
               duration="Aug 2023 - Aug 2024"
             />
             <ExperienceCard 
-              logoSrc="./mercedes_logo.jpeg?height=250&width=250"
+              logoSrc="/mercedes_logo.jpeg?height=250&width=250"
               companyName="Mercedes Benz "
               position="Project Intern"
               duration="Jun 2022 - Aug 2022 "
             />
             <ExperienceCard 
-              logoSrc="./roumy_logo.png?height=250&width=250"
+              logoSrc="/roumy_logo.png?height=250&width=250"
               companyName="ROUMY"
               position="Co-Founder"
               duration="Apr 2020 - Dec 2021"
             />
             <ExperienceCard 
-              logoSrc="./graphy_logo.png?height=250&width=250"
+              logoSrc="/graphy_logo.png?height=250&width=250"
               companyName="Graphy"
               position="Acquisition Intern"
               duration="Apr 2021- Nov 2021"
@@ -180,7 +188,7 @@ function SkillCategory({ title, skills }: { title: string, skills: string[] }) {
 
 function EducationCard({ logoSrc, universityName, degree, year }: { logoSrc: string, universityName: string, degree: string, year: string }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full flex flex-col">
+    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden w-full flex flex-col">
       <div className="p-2 flex-grow flex flex-col">
         <div className="mb-1 flex-shrink-0">
           <Image
@@ -192,21 +200,20 @@ function EducationCard({ logoSrc, universityName, degree, year }: { logoSrc: str
           />
         </div>
         <div className="flex-grow flex flex-col justify-between">
-          <h3 className="text-base font-medium text-center mb-2">{universityName}</h3> {/* Reduced from text-2xl to text-xl */}
+          <h3 className="text-base font-medium text-center mb-2">{universityName}</h3>
           <div>
-            <p className="text-sm text-gray-600 text-center mb-1">{degree}</p> {/* Reduced from text-lg to text-base */}
-            <p className="text-sm text-gray-500 text-center">{year}</p> {/* Reduced from text-md to text-sm */}
+            <p className="text-sm text-gray-600 text-center mb-1">{degree}</p>
+            <p className="text-sm text-gray-500 text-center">{year}</p>
           </div>
         </div>
       </div>
     </div>
-  )
-
+  );
 }
 
 function ExperienceCard({ logoSrc, companyName, position, duration }: { logoSrc: string, companyName: string, position: string, duration: string }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full flex flex-col">
+    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden w-full flex flex-col">
       <div className="p-2 flex-grow flex flex-col">
         <div className="mb-1 flex-shrink-0">
           <Image
@@ -224,5 +231,5 @@ function ExperienceCard({ logoSrc, companyName, position, duration }: { logoSrc:
         </div>
       </div>
     </div>
-  )
+  );
 }
