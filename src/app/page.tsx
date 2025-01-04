@@ -18,7 +18,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-transparent pointer-events-none"></div>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-50 px-4">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-4 sm:mb-6">Isha Deshpande</h1>
-          <div className="text-lg sm:text-xl md:text-2xl text-white">
+          <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-white font-semibold">
             <AnimatedText 
               texts={[
                 "Cyber Security Engineer and Product Manager"

@@ -7,9 +7,10 @@ interface AnimatedTextProps {
   typingSpeed?: number
   deletingSpeed?: number
   delayBetweenTexts?: number
+  className?: string
 }
 
-export function AnimatedText({ texts, typingSpeed = 100, deletingSpeed = 50, delayBetweenTexts = 1000 }: AnimatedTextProps) {
+export function AnimatedText({ texts, typingSpeed = 100, deletingSpeed = 50, delayBetweenTexts = 1000, className = '' }: AnimatedTextProps) {
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [currentText, setCurrentText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
@@ -42,7 +43,7 @@ export function AnimatedText({ texts, typingSpeed = 100, deletingSpeed = 50, del
   }, [currentText, currentTextIndex, isDeleting, texts, typingSpeed, deletingSpeed, delayBetweenTexts])
 
   return (
-    <span className="inline-block min-w-[35ch] text-left">
+    <span className={`inline-block w-full text-left ${className}`}>
       {currentText}
       <span className="animate-blink">|</span>
     </span>
