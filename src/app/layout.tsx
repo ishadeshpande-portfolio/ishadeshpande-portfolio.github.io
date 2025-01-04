@@ -19,32 +19,27 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
-          <header className="px-4 lg:px-6 h-14 flex items-center">
-            <Link className="flex items-center justify-center" href="/">
+          <header className="fixed top-0 left-0 right-0 z-50 bg-black text-white px-4 h-14 flex items-center">
+            <Link className="flex items-center justify-center mr-6" href="/">
               <span className="sr-only">Isha Deshpande</span>
-              <span className="ml-2 text-2xl font-bold font-bold">Isha</span>
             </Link>
-            <nav className="ml-auto flex gap-4 sm:gap-6">
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="/">
-                Home
-              </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="/projects">
-                Projects
-              </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="/blogs">
-                Blogs
-              </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="/contact">
-                Contact
-              </Link>
+            <nav className="flex-1 flex justify-center items-center space-x-1 sm:space-x-2 md:space-x-4 overflow-x-auto">
+              <NavLink href="/#about">ABOUT</NavLink>
+              <NavLink href="/#education">EDUCATION</NavLink>
+              <NavLink href="/blogs">EXPERIENCE</NavLink>
+              <NavLink href="/designs">PROJECTS</NavLink>
+              <NavLink href="/blogs">BLOGS</NavLink>
+              <NavLink href="/designs">DESIGNS</NavLink>
+              <NavLink href="/gallery">GALLERY</NavLink>
+              <NavLink href="/#contact">CONTACT</NavLink>
             </nav>
           </header>
-          <main className="flex-1">
+          <main className="flex-1 pt-14">
             {children}
           </main>
-          <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-            <p className="text-xs text-gray-500 dark:text-gray-400">© 2023 Isha Deshpande. All rights reserved.</p>
-            <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+          <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center justify-between px-4 md:px-6 border-t">
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 sm:mb-0">© 2023 Isha Deshpande. All rights reserved.</p>
+            <nav className="flex gap-4 sm:gap-6">
               <Link className="text-xs hover:underline underline-offset-4" href="/terms">
                 Terms of Service
               </Link>
@@ -57,4 +52,16 @@ export default function RootLayout({
       </body>
     </html>
   )
+}
+
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link 
+      className="text-sm font-medium px-2 py-2 relative group whitespace-nowrap"
+      href={href}
+    >
+      {children}
+      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+    </Link>
+  );
 }

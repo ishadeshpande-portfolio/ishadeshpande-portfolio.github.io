@@ -5,7 +5,7 @@ export default function CareerJourney() {
     <div className="w-full">
       <div>
         <Image
-          src="./experience.svg" // Replace with the correct path to your SVG file
+          src="/myriver.svg" // Replace with the correct path to your SVG file
           alt="Career Journey"
           width={1300} // Adjust width as per your requirement
           height={500} // Adjust height as per your requirement
