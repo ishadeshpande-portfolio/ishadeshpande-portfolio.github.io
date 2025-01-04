@@ -16,7 +16,10 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-transparent pointer-events-none"></div>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-50">
-          <h1 className="text-5xl font-bold text-white mb-6">Isha Deshpande</h1>
+          <h1 className="text-7xl font-bold text-white mb-6">Isha Deshpande</h1>
+          <div className="text-2xl text-white">
+          <div className="typewriter">Cyber Security Engineer and Product Manager</div>
+          </div>
         </div>
       </div>
 
@@ -78,13 +81,46 @@ export default function Home() {
               logoSrc="./uiuc_logo.jpg?height=250&width=250"
               universityName="University of Illinois Urbana-Champaign"
               degree="Master of Science in Technology Management"
-              year="2022 - 2024"
+              year="2024 - 2025"
             />
             <EducationCard 
               logoSrc="./ccoew_logo.jpeg?height=250&width=250"
-              universityName="University of Mumbai"
+              universityName="Cummins college of Engineering"
               degree="Bachelor of Engineering in Information Technology"
-              year="2017 - 2021"
+              year="2019 - 2023"
+            />
+          </div>
+        </div>
+      </div>
+
+    {/* Experience Section */}
+    <div className="min-h-screen flex items-center justify-center py-20" id="experience">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-4xl font-bold text-center mb-12">EXPERIENCE</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <ExperienceCard 
+              logoSrc="./pwc_logo.png?height=400&width=400"
+              companyName="Price Waterhouse Coopers (PwC)"
+              position="Associate"
+              duration="Aug 2023 - Aug 2024"
+            />
+            <ExperienceCard 
+              logoSrc="./mercedes_logo.jpeg?height=250&width=250"
+              companyName="Mercedes Benz "
+              position="Project Intern"
+              duration="Jun 2022 - Aug 2022 "
+            />
+            <ExperienceCard 
+              logoSrc="./roumy_logo.png?height=250&width=250"
+              companyName="ROUMY"
+              position="Co-Founder"
+              duration="Apr 2020 - Dec 2021"
+            />
+            <ExperienceCard 
+              logoSrc="./graphy_logo.png?height=250&width=250"
+              companyName="Graphy"
+              position="Acquisition Intern"
+              duration="Apr 2021- Nov 2021"
             />
           </div>
         </div>
@@ -144,26 +180,49 @@ function SkillCategory({ title, skills }: { title: string, skills: string[] }) {
 
 function EducationCard({ logoSrc, universityName, degree, year }: { logoSrc: string, universityName: string, degree: string, year: string }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-sm flex flex-col">
-      <div className="p-4 flex-grow flex flex-col">
-        <div className="mb-4 flex-shrink-0">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full flex flex-col">
+      <div className="p-2 flex-grow flex flex-col">
+        <div className="mb-1 flex-shrink-0">
           <Image
             src={logoSrc}
             alt={`${universityName} logo`}
-            width={300}
-            height={300}
+            width={350}
+            height={350}
             className="mx-auto"
           />
         </div>
         <div className="flex-grow flex flex-col justify-between">
-          <h3 className="text-xl font-semibold text-center mb-2">{universityName}</h3>
+          <h3 className="text-base font-medium text-center mb-2">{universityName}</h3> {/* Reduced from text-2xl to text-xl */}
           <div>
-            <p className="text-gray-600 text-center mb-1">{degree}</p>
-            <p className="text-gray-500 text-center">{year}</p>
+            <p className="text-sm text-gray-600 text-center mb-1">{degree}</p> {/* Reduced from text-lg to text-base */}
+            <p className="text-sm text-gray-500 text-center">{year}</p> {/* Reduced from text-md to text-sm */}
           </div>
         </div>
       </div>
     </div>
   )
 
+}
+
+function ExperienceCard({ logoSrc, companyName, position, duration }: { logoSrc: string, companyName: string, position: string, duration: string }) {
+  return (
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full flex flex-col">
+      <div className="p-2 flex-grow flex flex-col">
+        <div className="mb-1 flex-shrink-0">
+          <Image
+            src={logoSrc}
+            alt={`${companyName} logo`}
+            width={250}
+            height={250}
+            className="mx-auto"
+          />
+        </div>
+        <div className="flex-grow flex flex-col justify-between">
+          <h3 className="text-base font-semibold text-center mb-2">{companyName}</h3>
+          <p className="text-sm text-gray-700 text-center mb-1">{position}</p>
+          <p className="text-sm text-gray-500 text-center mb-3">{duration}</p>
+        </div>
+      </div>
+    </div>
+  )
 }

@@ -26,7 +26,7 @@ export default function RootLayout({
             <nav className="flex-1 flex justify-center items-center space-x-1 sm:space-x-2 md:space-x-4 overflow-x-auto">
               <NavLink href="/#about">ABOUT</NavLink>
               <NavLink href="/#education">EDUCATION</NavLink>
-              <NavLink href="/blogs">EXPERIENCE</NavLink>
+              <NavLink href="/#experience">EXPERIENCE</NavLink>
               <NavLink href="/designs">PROJECTS</NavLink>
               <NavLink href="/blogs">BLOGS</NavLink>
               <NavLink href="/designs">DESIGNS</NavLink>
