@@ -11,7 +11,7 @@ export default function Home() {
         {/* Placeholder for hero image */}
         <div className="relative w-full h-64 mb-8">
           <Image
-            src="/uiuc.jpg" // Replace with the correct path to your image
+            src="./uiuc.jpg" // Replace with the correct path to your image
             alt="Hero Image"
             layout="fill"
             objectFit="cover" // Ensures the image covers the entire area
