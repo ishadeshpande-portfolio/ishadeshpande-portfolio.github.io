@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Isha Deshpande - Portfolio',
-  description: 'Web Developer & Designer Portfolio',
+  description: 'Cyber Security Engineer and Product Manager',
 }
 
 export default function RootLayout({
@@ -24,6 +24,7 @@ export default function RootLayout({
               <span className="sr-only">Isha Deshpande</span>
             </Link>
             <nav className="flex-1 flex justify-center items-center space-x-1 sm:space-x-2 md:space-x-4 overflow-x-auto">
+            <NavLink href="/">HOME</NavLink>
               <NavLink href="/#about">ABOUT</NavLink>
               <NavLink href="/#education">EDUCATION</NavLink>
               <NavLink href="/#experience">EXPERIENCE</NavLink>

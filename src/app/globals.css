@@ -50,6 +50,7 @@ html {
 }
 
 .typewriter {
+  position: relative;
   font-size: 1.5rem;
   color: white;
   overflow: hidden;
@@ -57,4 +58,5 @@ html {
   border-right: 2px solid white;
   width: 35ch; /* Adjust to match the length of the text */
   animation: typing 6s steps(35, end) infinite, blink 0.8s step-end infinite;
+
 }

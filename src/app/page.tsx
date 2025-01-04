@@ -4,11 +4,11 @@ import { Linkedin, Mail, DribbbleIcon as Behance, Twitter, Check, Github } from 
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-grey-100 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-grey-100 to-white" id="home">
       {/* Hero Section */}
       <div className="relative h-screen w-full">
         <Image
-          src="./uiuc.jpg"
+          src="/.uiuc.jpg"
           alt="UIUC View"
           layout="fill"
           objectFit="cover"
