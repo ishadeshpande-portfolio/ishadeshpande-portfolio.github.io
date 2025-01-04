@@ -43,7 +43,7 @@ export default function Home() {
           </div>
           <div>
             <p className="text-lg text-gray-600 leading-relaxed">
-            Hello! I'm Isha, a product manager with a background in cybersecurity and entrepreneurship. Currently pursuing graduate studies at the University of Illinois Urbana-Champaign, I focus on creating innovative, consumer-centric solutions while prioritizing privacy right from the design process.
+            Hello! I am Isha, a product manager with a background in cybersecurity and entrepreneurship. Currently pursuing graduate studies at the University of Illinois Urbana-Champaign, I focus on creating innovative, consumer-centric solutions while prioritizing privacy right from the design process.
             </p>
           </div>
         </div>
