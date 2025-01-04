@@ -34,7 +34,7 @@ export default function Home() {
         <div className="flex items-center space-x-8">
           <div className="flex-shrink-0">
             <Image
-              src="/profile.svg"
+              src="./profile.svg"
               alt="Isha Deshpande Image"
               width={200}
               height={200}
