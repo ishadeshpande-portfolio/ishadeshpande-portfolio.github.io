@@ -21,10 +21,7 @@ export default function Home() {
           <div className="text-lg sm:text-xl md:text-2xl text-white">
             <AnimatedText 
               texts={[
-                "Cyber Security Engineer",
-                "Product Manager",
-                "Innovator",
-                "Tech Enthusiast"
+                "Cyber Security Engineer and Product Manager"
               ]}
               typingSpeed={100}
               deletingSpeed={50}
