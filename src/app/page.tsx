@@ -50,8 +50,7 @@ export default function Home() {
                   </div>
                   <div className="w-full">
                     <div className="space-y-4">
-                      <SkillCategory title="Skills" skills={["Agile Methodologies", "User Research", "Roadmap Planning"]} />
-                      <SkillCategory title="Domains" skills={["Threat Analysis", "Security Protocols", "Risk Management"]} />
+                      <SkillCategory title="Skills" skills={["User Experience (UX) Design", "User Interface (UI) Design", "Branding & Visual Identity", "Adobe Creative Suite", "Sketch & InVision", "Prototyping & Wireframing"]} />
                     </div>
                   </div>
                 </div>
