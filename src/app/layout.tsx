@@ -24,15 +24,15 @@ export default function RootLayout({
               <span className="sr-only">Isha Deshpande</span>
             </Link>
             <nav className="flex-1 flex justify-center items-center space-x-1 sm:space-x-2 md:space-x-4 overflow-x-auto">
-            <NavLink href="/">HOME</NavLink>
-              <NavLink href="/#about">ABOUT</NavLink>
-              <NavLink href="/#education">EDUCATION</NavLink>
-              <NavLink href="/#experience">EXPERIENCE</NavLink>
-              <NavLink href="/designs">PROJECTS</NavLink>
-              <NavLink href="/blogs">BLOGS</NavLink>
-              <NavLink href="/designs">DESIGNS</NavLink>
-              <NavLink href="/gallery">GALLERY</NavLink>
-              <NavLink href="/#contact">CONTACT</NavLink>
+            <a href="/">HOME</a>
+              <a href="#about">ABOUT</a>
+              <a href="#education">EDUCATION</a>
+              <a href="#experience">EXPERIENCE</a>
+              <a href="/projects">PROJECTS</a>
+              <a href="/blogs">BLOGS</a>
+              <a href="/designs">DESIGNS</a>
+              <a href="/gallery">GALLERY</a>
+              <a href="#contact">CONTACT</a>
             </nav>
           </header>
           <main className="flex-1 pt-14">
@@ -55,7 +55,7 @@ export default function RootLayout({
   )
 }
 
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+function a({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <Link 
       className="text-sm font-medium px-2 py-2 relative group whitespace-nowrap"
