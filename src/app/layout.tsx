@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button"
-import { PenTool } from 'lucide-react'
 import Link from "next/link"
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
