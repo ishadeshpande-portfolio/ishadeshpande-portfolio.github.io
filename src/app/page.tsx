@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Linkedin, Mail, DribbbleIcon as Behance, Twitter, Check, Github } from 'lucide-react'
-import { AnimatedText } from '../components/ui/AnimatedText'
+// import { AnimatedText } from '../components/ui/AnimatedText'
 
 export default function Home() {
   return (
