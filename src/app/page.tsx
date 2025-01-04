@@ -9,7 +9,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative h-screen w-full">
         <Image
-          src="/uiuc.jpg"
+          src="./uiuc.jpg"
           alt="UIUC View"
           layout="fill"
           objectFit="cover"
@@ -17,7 +17,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-transparent pointer-events-none"></div>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-50">
-          <h1 className="text-7xl font-bold text-white mb-6">Isha Deshpande</h1>
+          <h1 className="text-7xl font-extrabold text-white mb-6">Isha Deshpande</h1>
           <div className="text-2xl text-white">
           <AnimatedText 
               texts={[
@@ -32,7 +32,7 @@ export default function Home() {
       </div>
 
       {/* About Section */}
-      <div className="min-h-screen flex items-center justify-center py-20" id="about">
+      <div className="py-20" id="about">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="flex flex-col lg:flex-row">
@@ -41,7 +41,7 @@ export default function Home() {
                 <div className="flex flex-col items-center">
                   <div className="flex-shrink-0 mb-8">
                     <Image
-                      src="/profile.jpg"
+                      src="./profile.jpg"
                       alt="Isha Deshpande Image"
                       width={250}
                       height={250}
@@ -49,7 +49,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="w-full">
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                       <SkillCategory title="Skills" skills={["Agile Methodologies", "User Research", "Roadmap Planning"]} />
                       <SkillCategory title="Domains" skills={["Threat Analysis", "Security Protocols", "Risk Management"]} />
                     </div>
@@ -59,8 +59,8 @@ export default function Home() {
 
               {/* Second column: About text */}
               <div className="lg:w-2/3 p-8">
-                <h1 className="text-3xl text-gray-900 font-bold leading-loose mb-6">ABOUT ME</h1>
-                <div className="space-y-8">
+                <h1 className="text-3xl text-gray-900 font-extrabold leading-loose mb-6">ABOUT ME</h1>
+                <div className="space-y-6">
                   <p className="text-xl text-gray-700 leading-relaxed">
                     Hello! I am Isha, a product manager with a background in cybersecurity and entrepreneurship.
                     Currently pursuing graduate studies at the University of Illinois Urbana-Champaign,
@@ -80,55 +80,55 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Education Section */}
-      <div className="min-h-screen flex items-center justify-center py-20" id="education">
+      {/* Experience Section */}
+      <div className="py-20" id="experience">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12">EDUCATION</h2>
-          <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
-            <EducationCard 
-              logoSrc="/uiuc_logo.jpg?height=250&width=250"
-              universityName="University of Illinois Urbana-Champaign"
-              degree="Master of Science in Technology Management"
-              year="2024 - 2025"
+          <h2 className="text-4xl font-extrabold text-center mb-12">EXPERIENCE</h2>
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-8"> {/* Changed from grid to flex */}
+            <ExperienceCard
+              src="./pwc_logo.png?height=400&width=400"
+              companyName="Price Waterhouse Coopers (PwC)"
+              position="Associate"
+              duration="Aug 2023 - Aug 2024"
             />
-            <EducationCard 
-              logoSrc="/ccoew_logo.jpeg?height=250&width=250"
-              universityName="Cummins college of Engineering"
-              degree="Bachelor of Engineering in Information Technology"
-              year="2019 - 2023"
+            <ExperienceCard
+              src="./mercedes_logo.jpeg?height=250&width=250"
+              companyName="Mercedes Benz"
+              position="Project Intern"
+              duration="Jun 2022 - Aug 2022"
+            />
+            <ExperienceCard
+              src="./roumy_logo.png?height=250&width=250"
+              companyName="ROUMY"
+              position="Co-Founder"
+              duration="Apr 2020 - Dec 2021"
+            />
+            <ExperienceCard
+              src="./graphy_logo.png?height=250&width=250"
+              companyName="Graphy"
+              position="Acquisition Intern"
+              duration="Apr 2021 - Nov 2021"
             />
           </div>
         </div>
       </div>
 
-    {/* Experience Section */}
-    <div className="min-h-screen flex items-center justify-center py-20" id="experience">
+      {/* Education Section */}
+      <div className="py-20" id="education">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12">EXPERIENCE</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ExperienceCard 
-              logoSrc="/pwc_logo.png?height=400&width=400"
-              companyName="Price Waterhouse Coopers (PwC)"
-              position="Associate"
-              duration="Aug 2023 - Aug 2024"
+          <h2 className="text-4xl font-extrabold text-center mb-12">EDUCATION</h2>
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
+            <EducationCard 
+              src="./uiuc_logo.jpg?height=250&width=250"
+              universityName="University of Illinois Urbana-Champaign"
+              degree="Master of Science in Technology Management"
+              year="2024 - 2025"
             />
-            <ExperienceCard 
-              logoSrc="/mercedes_logo.jpeg?height=250&width=250"
-              companyName="Mercedes Benz "
-              position="Project Intern"
-              duration="Jun 2022 - Aug 2022 "
-            />
-            <ExperienceCard 
-              logoSrc="/roumy_logo.png?height=250&width=250"
-              companyName="ROUMY"
-              position="Co-Founder"
-              duration="Apr 2020 - Dec 2021"
-            />
-            <ExperienceCard 
-              logoSrc="/graphy_logo.png?height=250&width=250"
-              companyName="Graphy"
-              position="Acquisition Intern"
-              duration="Apr 2021- Nov 2021"
+            <EducationCard 
+              src="./ccoew_logo.jpeg?height=250&width=250"
+              universityName="Cummins college of Engineering"
+              degree="Bachelor of Engineering in Information Technology"
+              year="2019 - 2023"
             />
           </div>
         </div>
@@ -186,24 +186,24 @@ function SkillCategory({ title, skills }: { title: string, skills: string[] }) {
   
 }
 
-function EducationCard({ logoSrc, universityName, degree, year }: { logoSrc: string, universityName: string, degree: string, year: string }) {
+function EducationCard({ src, universityName, degree, year }: { src: string, universityName: string, degree: string, year: string }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden w-full flex flex-col">
-      <div className="p-2 flex-grow flex flex-col">
-        <div className="mb-1 flex-shrink-0">
+    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden w-full max-w-xs flex flex-col"> {/* Reduced size with max-w-xs */}
+      <div className="p-1.5 flex-grow flex flex-col"> {/* Reduced padding */}
+        <div className="mb-0.5 flex-shrink-0"> {/* Reduced margin */}
           <Image
-            src={logoSrc}
+            src={src}
             alt={`${universityName} logo`}
-            width={350}
-            height={350}
+            width={280} // Reduced from 350
+            height={280} // Reduced from 350
             className="mx-auto"
           />
         </div>
         <div className="flex-grow flex flex-col justify-between">
-          <h3 className="text-base font-medium text-center mb-2">{universityName}</h3>
+          <h3 className="text-sm font-medium text-center mb-1.5">{universityName}</h3> {/* Reduced font size */}
           <div>
-            <p className="text-sm text-gray-600 text-center mb-1">{degree}</p>
-            <p className="text-sm text-gray-500 text-center">{year}</p>
+            <p className="text-xs text-gray-600 text-center mb-0.5">{degree}</p> {/* Reduced font size */}
+            <p className="text-xs text-gray-500 text-center">{year}</p> {/* Reduced font size */}
           </div>
         </div>
       </div>
@@ -211,23 +211,23 @@ function EducationCard({ logoSrc, universityName, degree, year }: { logoSrc: str
   );
 }
 
-function ExperienceCard({ logoSrc, companyName, position, duration }: { logoSrc: string, companyName: string, position: string, duration: string }) {
+function ExperienceCard({ src, companyName, position, duration }: { src: string, companyName: string, position: string, duration: string }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden w-full flex flex-col">
-      <div className="p-2 flex-grow flex flex-col">
-        <div className="mb-1 flex-shrink-0">
+    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden w-full max-w-xs flex flex-col"> {/* Reduced size with max-w-xs */}
+      <div className="p-1.5 flex-grow flex flex-col"> {/* Reduced padding */}
+        <div className="mb-0.5 flex-shrink-0"> {/* Reduced margin */}
           <Image
-            src={logoSrc}
+            src={src}
             alt={`${companyName} logo`}
-            width={250}
-            height={250}
+            width={200} // Reduced from 250
+            height={200} // Reduced from 250
             className="mx-auto"
           />
         </div>
         <div className="flex-grow flex flex-col justify-between">
-          <h3 className="text-base font-semibold text-center mb-2">{companyName}</h3>
-          <p className="text-sm text-gray-700 text-center mb-1">{position}</p>
-          <p className="text-sm text-gray-500 text-center mb-3">{duration}</p>
+          <h3 className="text-sm font-semibold text-center mb-1.5">{companyName}</h3> {/* Reduced font size */}
+          <p className="text-xs text-gray-700 text-center mb-0.5">{position}</p> {/* Reduced font size */}
+          <p className="text-xs text-gray-500 text-center">{duration}</p> {/* Reduced font size */}
         </div>
       </div>
     </div>

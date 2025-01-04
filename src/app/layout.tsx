@@ -18,18 +18,27 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
           {/* Header Section */}
-          <header className="fixed top-0 left-0 right-0 z-50 bg-black text-white px-4 h-14 flex items-center">
-            <Link className="flex items-center justify-center mr-6" href={`${basePath}/`}>
-              <span className="sr-only">Isha Deshpande</span>
-            </Link>
-            <nav className="flex-1 flex justify-center items-center space-x-1 sm:space-x-2 md:space-x-4 overflow-x-auto">
-              <NavLink href="/">HOME</NavLink>
-              <NavLink href="/#about">ABOUT</NavLink>
-              <NavLink href="/#education">EDUCATION</NavLink>
-              <NavLink href="/#experience">EXPERIENCE</NavLink>
-              <NavLink href="/#contact">CONTACT</NavLink>
-            </nav>
+          <header className="fixed top-0 left-0 right-0 z-50 bg-black text-white px-4 md:px-8 h-16 flex items-center justify-center">
+            <div className="container mx-auto flex justify-between items-center max-w-screen-xl">
+              {/* Logo or Brand */}
+              <Link className="flex items-center justify-center mr-6" href={`${basePath}/`}>
+                <span className="sr-only">Isha Deshpande</span>
+              </Link>
+
+              {/* Navbar */}
+              <nav className="flex-1 flex justify-evenly items-center space-x-4 md:space-x-6 overflow-x-auto">
+                <NavLink href="/">HOME</NavLink>
+                <NavLink href="/#about">ABOUT</NavLink>
+                <NavLink href="/#experience">EXPERIENCE</NavLink>
+                <NavLink href="/#education">EDUCATION</NavLink>
+                <NavLink href="/projects">PROJECTS</NavLink>
+                <NavLink href="/designs">DESIGNS</NavLink>
+                <NavLink href="/blogs">BLOGS</NavLink>
+                <NavLink href="/#contact">CONTACT</NavLink>
+              </nav>
+            </div>
           </header>
+
 
           {/* Main Content */}
           <main className="flex-1 pt-14">{children}</main>
@@ -71,6 +80,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   return (
     <a
       href={`${basePath}${href}`}
+      // href={`${href}`}
       onClick={handleClick}
       className="text-sm font-medium px-2 py-2 relative group whitespace-nowrap"
     >
