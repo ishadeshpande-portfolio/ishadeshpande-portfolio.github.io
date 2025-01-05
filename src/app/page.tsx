@@ -9,7 +9,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative h-screen w-full">
         <Image
-          src="./uiuc.jpg"
+          src="/uiuc.jpg"
           alt="UIUC View"
           layout="fill"
           objectFit="cover"
@@ -21,7 +21,7 @@ export default function Home() {
           <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-white font-semibold">
             <AnimatedText 
               texts={[
-                "Cyber Security Engineer and Product Manager"
+                "Cyber Security Engineer","Product Manager"
               ]}
               typingSpeed={100}
               deletingSpeed={50}
@@ -41,7 +41,7 @@ export default function Home() {
                 <div className="flex flex-col items-center">
                   <div className="flex-shrink-0 mb-6 sm:mb-8">
                     <Image
-                      src="./profile.jpg"
+                      src="/profile.jpg"
                       alt="Isha Deshpande Image"
                       width={200}
                       height={200}
@@ -80,30 +80,30 @@ export default function Home() {
       </div>
 
       {/* Experience Section */}
-      <div className="py-12 sm:py-20" id="experience">
+      <div className="py-12 sm:py-5" id="experience">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-8 sm:mb-12">EXPERIENCE</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 sm:gap-8">
             <ExperienceCard
-              src="./pwc_logo.png?height=400&width=400"
+              src="/pwc_logo.png?height=400&width=400"
               companyName="Price Waterhouse Coopers (PwC)"
               position="Associate"
               duration="Aug 2023 - Aug 2024"
             />
             <ExperienceCard
-              src="./mercedes_logo.jpeg?height=250&width=250"
+              src="/mercedes_logo.jpeg?height=250&width=250"
               companyName="Mercedes Benz"
               position="Project Intern"
               duration="Jun 2022 - Aug 2022"
             />
             <ExperienceCard
-              src="./roumy_logo.png?height=250&width=250"
+              src="/roumy_logo.png?height=250&width=250"
               companyName="ROUMY"
               position="Co-Founder"
               duration="Apr 2020 - Dec 2021"
             />
             <ExperienceCard
-              src="./graphy_logo.png?height=250&width=250"
+              src="/graphy_logo.png?height=250&width=250"
               companyName="Graphy"
               position="Acquisition Intern"
               duration="Apr 2021 - Nov 2021"
@@ -118,13 +118,13 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-8 sm:mb-12">EDUCATION</h2>
           <div className="flex flex-col sm:flex-row justify-center items-stretch gap-6 sm:gap-8">
             <EducationCard 
-              src="./uiuc_logo.jpg?height=250&width=250"
+              src="/uiuc_logo.jpg?height=250&width=250"
               universityName="University of Illinois Urbana-Champaign"
               degree="Master of Science in Technology Management"
               year="2024 - 2025"
             />
             <EducationCard 
-              src="./ccoew_logo.jpeg?height=250&width=250"
+              src="/ccoew_logo.jpeg?height=250&width=250"
               universityName="Cummins college of Engineering"
               degree="Bachelor of Engineering in Information Technology"
               year="2019 - 2023"
