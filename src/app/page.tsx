@@ -67,9 +67,10 @@ export default function Home() {
                   </p>
                   <div className="bg-gray-50 rounded-lg p-4 sm:p-6 border-l-4 border-black">
                     <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                      I believe in the modified phrase, &quotCuriosity educated the cat.&quot I am always exploring new technologies and discovering how they can complement businesses.
-                      For me, creating digital products is not just about innovation—it is about ensuring they serve the physical businesses or consumers at their core.
-                      I enjoy creating 3D landscapes in Blender, fostering kittens, and exploring photography. These hobbies keep me grounded and inspire creativity in all aspects of my work.
+                    In my previous role as a Big Four advisor, I collaborated on multiple projects to enhance clients security landscapes, aligning with ISO 27001 and NIST CSF. My responsibilities encompassed managing security risks, designing comprehensive cybersecurity governance structures and policies, and ensuring compliance with GDPR requirements and ISO controls for robust data privacy protection. Beyond my previous roles, I served as the Project Compliance Manager for pre-sales and project onboarding, ensuring that all processes adhered to the highest compliance standards.
+My passion for cybersecurity was solidified during an internship with Mercedes-Benz, where I worked with their cybersecurity and UX teams. This pivotal experience marked the beginning of my product journey with a unique cybersecurity perspective. I developed employee segmentation strategies for tailored cybersecurity awareness programs and collaborated with the UX team to map user journeys, design intuitive interfaces, and prioritize features for an innovative chatbot.
+One of my most fulfilling experiences has been creating a B2B2C platform that empowers interior designers to source projects independently, enables businesses to sell products globally, and provides customers with budget-friendly, hassle-free interior design solutions. Through this venture, I gained hands-on experience in product marketing, operations management, UI/UX design, and product management, building a versatile skill set from the ground up.
+
                     </p>
                   </div>
                 </div>
