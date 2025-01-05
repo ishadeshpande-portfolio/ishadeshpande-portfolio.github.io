@@ -45,10 +45,10 @@ function Footer() {
         © 2023 Isha Deshpande. All rights reserved.
       </p>
       <nav className="flex gap-4 sm:gap-6 justify-center sm:justify-end">
-        <Link className="text-xs hover:underline underline-offset-4" href={`${basePath}/terms`}>
+        <Link className="text-xs hover:underline underline-offset-4" href={`/terms`}>
           Terms of Service
         </Link>
-        <Link className="text-xs hover:underline underline-offset-4" href={`${basePath}/privacy`}>
+        <Link className="text-xs hover:underline underline-offset-4" href={`/privacy`}>
           Privacy
         </Link>
       </nav>
