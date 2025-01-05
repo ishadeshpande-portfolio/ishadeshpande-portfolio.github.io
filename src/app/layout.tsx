@@ -23,7 +23,7 @@ function Header() {
         </button>
 
         <nav className={`${isMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row absolute md:relative top-16 md:top-0 left-0 right-0 bg-black md:bg-transparent p-4 md:p-0 space-y-2 md:space-y-0 md:space-x-4 items-center`}>
-          {/* <NavLink href="/" onClick={() => setIsMenuOpen(false)}>HOME</NavLink> */}
+          <NavLink href="/" onClick={() => setIsMenuOpen(false)}>HOME</NavLink>
           <NavLink href="/#about" onClick={() => setIsMenuOpen(false)}>ABOUT</NavLink>
           <NavLink href="/#experience" onClick={() => setIsMenuOpen(false)}>EXPERIENCE</NavLink>
           <NavLink href="/#education" onClick={() => setIsMenuOpen(false)}>EDUCATION</NavLink>
