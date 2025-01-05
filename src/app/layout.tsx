@@ -38,7 +38,6 @@ function Header() {
 }
 
 function Footer() {
-  const basePath = "/portfolio-pages";
   
   return (
     <footer className="flex flex-col sm:flex-row py-4 w-full shrink-0 items-center justify-between px-4 md:px-6 border-t text-center sm:text-left">
@@ -76,7 +75,6 @@ export default function RootLayout({
 }
 
 function NavLink({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void }) {
-  const basePath = "/portfolio-pages"; // Your GitHub repository name
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (href.startsWith("#")) {
@@ -92,8 +90,7 @@ function NavLink({ href, children, onClick }: { href: string; children: React.Re
 
   return (
     <a
-      // href={`${href}`}
-      href={`${basePath}${href}`}
+      href={`${href}`}
       onClick={handleClick}
       className="text-sm font-medium px-2 py-2 relative group whitespace-nowrap"
     >
