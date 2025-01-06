@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
+    --background: #d3d3d3;
     --foreground: #000000;
   }
 }
@@ -50,4 +50,14 @@ html {
 
 .animate-blink {
   animation: blink 0.7s infinite;
+}
+
+
+.dark-orange-link {
+  color: rgb(131, 72, 0); /* Sets the text color to dark orange */
+  text-decoration: none; /* Removes underline from the link */
+}
+
+.dark-orange-link:hover {
+  text-decoration: underline; /* Adds underline when hovering */
 }
