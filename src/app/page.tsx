@@ -155,26 +155,25 @@ export default function Home() {
       </div>
 
       {/* Education Section */}
-<div className="py-12 sm:py-20" id="education">
-  <div className="container mx-auto px-4 max-w-6xl">
-    <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-8 sm:mb-12">EDUCATION</h2>
-    <div className="flex flex-wrap justify-center items-center">
-      <EducationCard 
-        src="/uiuc_logo.jpg?height=250&width=250"
-        universityName="University of Illinois Urbana-Champaign"
-        degree="Master of Science in Technology Management"
-        year="2024 - 2025"
-      />
-      <EducationCard 
-        src="/ccoew_logo.jpeg?height=250&width=250"
-        universityName="Cummins college of Engineering"
-        degree="Bachelor of Engineering in Information Technology"
-        year="2019 - 2023"
-      />
-    </div>
-  </div>
-</div>
-
+      <div className="py-12 sm:py-20" id="education">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-8 sm:mb-12">EDUCATION</h2>
+          <div className="flex flex-wrap justify-center items-center gap-6">
+            <EducationCard 
+              src="/uiuc_logo.jpg?height=250&width=250"
+              universityName="University of Illinois Urbana-Champaign"
+              degree="Master of Science in Technology Management"
+              year="2024 - 2025"
+            />
+            <EducationCard 
+              src="/ccoew_logo.jpeg?height=250&width=250"
+              universityName="Cummins college of Engineering"
+              degree="Bachelor of Engineering in Information Technology"
+              year="2019 - 2023"
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Contact Section */}
       <footer className="relative w-full py-16 sm:py-40" id="contact">
