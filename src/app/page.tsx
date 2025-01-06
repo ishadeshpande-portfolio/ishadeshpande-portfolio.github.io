@@ -95,7 +95,7 @@ export default function Home() {
                   </p>
                   <div className="bg-gray-50 rounded-lg p-4 sm:p-6 border-l-4 border-black space-y-4">
                   <p>
-                    In my previous role as a Big Four advisor, I collaborated on multiple projects to enhance clients' security landscapes,aligning with ISO 27001 and NIST CSF.
+                    In my previous role as a Big Four advisor, I collaborated on multiple projects to enhance clients&apos; security landscapes,aligning with ISO 27001 and NIST CSF.
                     My responsibilities encompassed managing security risks, designing comprehensive cybersecurity governance structures and policies, and ensuring compliance with GDPR requirements and ISO controls for robust data privacy protection.
                     Beyond my previous roles, I served as the Project Compliance Manager for pre-sales and project onboarding, ensuring that all processes adhered to the highest compliance standards.
                   </p>
