@@ -85,7 +85,7 @@ export default function Home() {
 
               {/* Second column: About text */}
               <div className="lg:w-2/3 p-6 sm:p-8">
-                <h1 className="text-2xl sm:text-3xl text-gray-900 font-extrabold leading-loose mb-4 sm:mb-10">ABOUT ME</h1>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-left mb-8 sm:mb-12">ABOUT ME</h2>
                 <div className="space-y-4 sm:space-y-6">
                 <div className="text-base sm:text-lg md:text-base text-gray-600 leading-relaxed space-y-4">
                   <p className="text-lg sm:text-xl md:text-xl font-base text-gray-600 mb-10">
@@ -229,7 +229,7 @@ function SkillCategory({ title, skills }: SkillCategoryProps) {
 
 function EducationCard({ src, universityName, degree, year }: { src: string, universityName: string, degree: string, year: string }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden max-w-sm mx-4">
+    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden w-full max-w-sm mx-4">
       <div className="p-4 flex flex-col h-full">
         <div className="mb-4 flex-shrink-0">
           <Image
