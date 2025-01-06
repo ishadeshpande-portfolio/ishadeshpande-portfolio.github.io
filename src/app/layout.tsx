@@ -42,7 +42,7 @@ function Footer() {
   return (
     <footer className="flex flex-col sm:flex-row py-4 w-full shrink-0 items-center justify-between px-4 md:px-6 border-t text-center sm:text-left">
       <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 sm:mb-0">
-        © 2023 Isha Deshpande. All rights reserved.
+        © 2025 Isha Deshpande. All rights reserved.
       </p>
       <nav className="flex gap-4 sm:gap-6 justify-center sm:justify-end">
         <Link className="text-xs hover:underline underline-offset-4" href={`/terms`}>

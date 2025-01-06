@@ -39,7 +39,7 @@ export default function Home() {
               {/* First column: Profile image and Skills */}
               <div className="lg:w-1/3 bg-gray-50 p-6 sm:p-8">
                 <div className="flex flex-col items-center">
-                  <div className="flex-shrink-0 mb-6 sm:mb-8">
+                  <div className="flex-shrink-0 mb-6 sm:mb-8 transition-transform duration-300 ease-in-out hover:scale-105">
                     <Image
                       src="/profile.jpg"
                       alt="Isha Deshpande Profile Image"
@@ -69,13 +69,6 @@ export default function Home() {
                           // <><strong>Backend Tools:</strong> Node.js, Express.js, Django, Flask, FastAPI, RESTful APIs, WebSocket, JSON, XML, Auth0</>,
                           <><strong>Frameworks:</strong> NIST, ISO, COBIT, COSO, ITIL,CIS Controls, PCI-DSS,GDPR,SDLC</>,
                           <><strong>Skills:</strong> Cybersecurity governance structure, Cybersecurity and information policy, Business continuity and Enterprise risk management (ERM), Identity Access Management (IAM), Data analytics, Operational technology cybersecurity assessment</>,
-                        ]}
-                      />
-
-                      <SkillCategory
-                        title="Certifications"
-                        skills={[
-                          <>ISO 23301:LI, ISO 27701:LI, ISO 27001:LI, Cyber Ethical Hacking (CEH), CCNA: Introduction to Networking, Introduction to cyber security and cyber-attacks IBM, Create High-Fidelity Designs and Prototypes in Figma-Google, CAPM-Project Management Institute</>
                         ]}
                       />
                     </div>
@@ -228,7 +221,7 @@ function SkillCategory({ title, skills }: SkillCategoryProps) {
 
 function EducationCard({ src, universityName, degree, year }: { src: string, universityName: string, degree: string, year: string }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden w-full max-w-sm mx-4">
+    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden w-full max-w-sm mx-4 transition-transform duration-300 ease-in-out hover:scale-105">
       <div className="p-4 flex flex-col h-full">
         <div className="mb-4 flex-shrink-0">
           <Image
@@ -253,7 +246,7 @@ function EducationCard({ src, universityName, degree, year }: { src: string, uni
 
 function ExperienceCard({ src, companyName, position, duration }: { src: string, companyName: string, position: string, duration: string }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden w-full max-w-sm mx-auto">
+    <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden w-full max-w-sm mx-auto transition-transform duration-300 ease-in-out hover:scale-105">
       <div className="p-4 flex flex-col h-full">
         <div className="mb-4 flex-shrink-0">
           <Image
